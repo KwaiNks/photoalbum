@@ -22,4 +22,10 @@ public class PhotoAlbumTest {
         assertEquals(10, photoAlbum.getNumberOfPagesInAlbum());
     }
 
+    @Test
+    public void shouldBeAbleToAddAnotherPageToTheAlbum(){
+        photoAlbum.add(new Page(10));
+        assertEquals(11, photoAlbum.getNumberOfPagesInAlbum());
+    }
+
 }

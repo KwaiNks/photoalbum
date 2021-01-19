@@ -21,4 +21,8 @@ public void setName(String name) {
 public int getNumberOfPagesInAlbum() {
     return pages.size();
 }
+
+public void add(Page page){
+    pages.add(page);
+}
 }
