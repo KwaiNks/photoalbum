@@ -2,14 +2,13 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 import org.junit.Before;
 
-public class Photoalbumtest {
+public class PhotoAlbumTest {
     
    PhotoAlbum photoAlbum;
-    int [] numberOfPagesInAlbum;
+    int [] numberOfPagesInAlbum = new int[10];
 
     @Before
 	public void setUP() {
-        numberOfPagesInAlbum = new int[10];
         photoAlbum = new PhotoAlbum();
     }
     
@@ -21,7 +20,7 @@ public class Photoalbumtest {
 
     @Test
     public void shouldReturnTheNumberOfPagesInAlbum(){
-        assertEquals(10, numberOfPagesInAlbum.length);
+        assertEquals(10, photoAlbum.getNumberOfPagesInAlbum(numberOfPagesInAlbum));
     }
 
 }
