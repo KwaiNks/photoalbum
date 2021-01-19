@@ -5,11 +5,10 @@ import org.junit.Before;
 public class PhotoAlbumTest {
     
    PhotoAlbum photoAlbum;
-    int [] numberOfPagesInAlbum = new int[10];
 
     @Before
 	public void setUP() {
-        photoAlbum = new PhotoAlbum();
+        photoAlbum = new PhotoAlbum(10);
     }
     
     @Test
@@ -20,7 +19,7 @@ public class PhotoAlbumTest {
 
     @Test
     public void shouldReturnTheNumberOfPagesInAlbum(){
-        assertEquals(10, photoAlbum.getNumberOfPagesInAlbum(numberOfPagesInAlbum));
+        assertEquals(10, photoAlbum.getNumberOfPagesInAlbum());
     }
 
 }
