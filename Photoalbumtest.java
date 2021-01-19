@@ -4,18 +4,19 @@ import org.junit.Before;
 
 public class Photoalbumtest {
     
-    String name;
+   PhotoAlbum photoAlbum;
     int [] numberOfPagesInAlbum;
 
     @Before
 	public void setUP() {
-		numberOfPagesInAlbum = new int[10];
+        numberOfPagesInAlbum = new int[10];
+        photoAlbum = new PhotoAlbum();
     }
     
     @Test
     public void shouldReturnNameOfAlbum(){
-        name = "My Trip to New York";
-        assertEquals("My Trip to New York", name);
+       photoAlbum.setName("My Trip to New York");
+        assertEquals("My Trip to New York", photoAlbum.getName());
     }
 
     @Test
