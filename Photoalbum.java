@@ -12,6 +12,4 @@ public void setName(String name) {
 public int getNumberOfPagesInAlbum(int [] numberOfPagesInAlbum) {
     return numberOfPagesInAlbum.length;
 }
-
-
 }
