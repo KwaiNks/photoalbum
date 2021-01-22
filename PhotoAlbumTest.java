@@ -53,4 +53,12 @@ public class PhotoAlbumTest {
         assertEquals(1, page1.getNumberOfPhotosInPage());
     }
 
+
+    // This is setting up the next test for Richmond
+    @Test
+    public void shouldBeAbleToRemoveAllPagesFromAnAlbumWithTenPages(){
+
+        //TODO
+    }
+
 }
