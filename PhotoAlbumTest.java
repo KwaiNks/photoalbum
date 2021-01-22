@@ -28,4 +28,14 @@ public class PhotoAlbumTest {
         assertEquals(11, photoAlbum.getNumberOfPagesInAlbum());
     }
 
+    @Test
+    public void shouldBeAbleToMovePhotoFromOnePageToAnother(){
+
+        Page page0 = new Page(1);
+        Page page1 = new Page(0);
+        photoAlbum = new PhotoAlbum(page0, page1);
+        photoAlbum.movePhotoBetweenPages(0, 0, 1);
+        assertEquals(1, page1.getNumberOfPhotosInPage());
+    }
+
 }

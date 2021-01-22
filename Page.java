@@ -14,4 +14,12 @@ photos.add(new Photo());
 public int getNumberOfPhotosInPage() {
     return photos.size();
 }
+
+public Photo getPhoto(int positionOfPhotoOnPage){
+  return photos.get(positionOfPhotoOnPage);
+}
+
+public void addPhoto(Photo photo) {
+  photos.add(photo);
+}
 }
