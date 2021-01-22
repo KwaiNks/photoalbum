@@ -12,10 +12,9 @@ for(int i = 0; i < numberOfPages; i++)
  pages.add(new Page(10));
 }
 
-    public PhotoAlbum(Page page1, Page page2) {
-        pages = new ArrayList<Page>(2);
-        pages.add(page1);
-        pages.add(page2);
+    public PhotoAlbum(List<Page> thePages) {
+        pages = new ArrayList<>();
+        pages.addAll(thePages);
 }
 
 	public String getName() {

@@ -1,4 +1,9 @@
 import static org.junit.Assert.assertEquals;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 import org.junit.Test;
 import org.junit.Before;
 
@@ -33,7 +38,7 @@ public class PhotoAlbumTest {
 
         Page page0 = new Page(1);
         Page page1 = new Page(0);
-        photoAlbum = new PhotoAlbum(page0, page1);
+        photoAlbum = new PhotoAlbum(Arrays.asList(page0, page1));
         photoAlbum.movePhotoBetweenPages(0, 0, 1);
         assertEquals(1, page1.getNumberOfPhotosInPage());
     }
