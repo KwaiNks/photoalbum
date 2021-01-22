@@ -22,4 +22,8 @@ public Photo getPhoto(int positionOfPhotoOnPage){
 public void addPhoto(Photo photo) {
   photos.add(photo);
 }
+
+public void removePhoto(int positionOfPhotoOnPage) {
+  photos.remove(positionOfPhotoOnPage);
+}
 }

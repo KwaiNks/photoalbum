@@ -36,6 +36,7 @@ public void movePhotoBetweenPages(int positionOfPhotoOnPage,
                     int pageWherePhotoWillBeMovedTo) {
     Photo photo = pages.get(pageCurrentlyHoldingPhoto)
                              .getPhoto(positionOfPhotoOnPage);
+    pages.get(pageCurrentlyHoldingPhoto).removePhoto(positionOfPhotoOnPage);                         
     pages.get(pageWherePhotoWillBeMovedTo).addPhoto(photo);
 }
 }

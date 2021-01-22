@@ -40,6 +40,7 @@ public class PhotoAlbumTest {
         Page page1 = new Page(0);
         photoAlbum = new PhotoAlbum(Arrays.asList(page0, page1));
         photoAlbum.movePhotoBetweenPages(0, 0, 1);
+        assertEquals(0, page0.getNumberOfPhotosInPage());
         assertEquals(1, page1.getNumberOfPhotosInPage());
     }
 
