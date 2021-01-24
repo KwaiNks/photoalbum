@@ -8,39 +8,38 @@ import org.junit.Test;
 import org.junit.Before;
 
 public class PhotoAlbumTest {
-    
-   PhotoAlbum photoAlbum;
-   Page page0;
-   Page page1;
+
+    PhotoAlbum photoAlbum;
+    Page page0;
+    Page page1;
 
     @Before
-	public void setUP() {
+    public void setUP() {
         photoAlbum = new PhotoAlbum(10);
         page0 = new Page(1);
         page1 = new Page(0);
     }
-    
+
     @Test
-    public void shouldReturnNameOfAlbum(){
-       photoAlbum.setName("My Trip to New York");
+    public void shouldReturnNameOfAlbum() {
+        photoAlbum.setName("My Trip to New York");
         assertEquals("My Trip to New York", photoAlbum.getName());
     }
 
     @Test
-    public void shouldReturnTheNumberOfPagesInAlbum(){
+    public void shouldReturnTheNumberOfPagesInAlbum() {
         assertEquals(10, photoAlbum.getNumberOfPagesInAlbum());
     }
 
     @Test
-    public void shouldBeAbleToAddAnotherPageToTheAlbum(){
+    public void shouldBeAbleToAddAnotherPageToTheAlbum() {
         photoAlbum.add(new Page(10));
         assertEquals(11, photoAlbum.getNumberOfPagesInAlbum());
     }
 
-
     // This is the BIG end to end test describing what we are trying to achieve
     @Test
-    public void shouldBeAbleToMovePhotoFromOnePageToAnother(){
+    public void shouldBeAbleToMovePhotoFromOnePageToAnother() {
 
         // Arrange the test with test data
         photoAlbum = new PhotoAlbum(Arrays.asList(page0, page1));
@@ -53,12 +52,11 @@ public class PhotoAlbumTest {
         assertEquals(1, page1.getNumberOfPhotosInPage());
     }
 
-
     // This is setting up the next test for Richmond
     @Test
-    public void shouldBeAbleToRemoveAllPagesFromAnAlbumWithTenPages(){
-
-        //TODO
+    public void shouldBeAbleToRemoveAllPagesFromAnAlbumWithTenPages() {
+        photoAlbum = new PhotoAlbum(10);
+        assertEquals(0, photoAlbum.removeAllPagesInAlbum());
     }
 
 }
